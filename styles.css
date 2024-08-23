@@ -17,6 +17,7 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ocultar cualquier desbordamiento */
 }
 
 .left-panel, .right-panel {
@@ -56,12 +57,14 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px; /* Bordes redondeados */
     cursor: pointer;
+    margin: 5px; /* Margen alrededor de los botones */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
 }
 
 button:hover {
-    background-color: #ddd;
+    background-color: #0A3871;
 }
 
 #encryptBtn, #decryptBtn {
@@ -69,22 +72,22 @@ button:hover {
 }
 
 #copyBtn {
-    background-color: #4CAF50;
+    background-color: #909294;
     color: white;
     margin-top: 10px; /* Espacio arriba del botón Copiar */
 }
 
 #copyBtn:hover {
-    background-color: #45a049;
+    background-color: #0A3871;
 }
 
 #clearBtn {
-    background-color: #f44336;
+    background-color: #909294;
     color: white;
 }
 
 #clearBtn:hover {
-    background-color: #d32f2f;
+    background-color: #0A3871;
 }
 
 .warning {
@@ -92,4 +95,24 @@ button:hover {
     font-size: 14px;
     margin: 10px 0;
     display: none; /* Ocultar el mensaje por defecto */
+}
+
+/* Media queries para hacer el diseño responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Apilar paneles verticalmente en pantallas pequeñas */
+        height: auto; /* Ajustar la altura automática */
+    }
+
+    .left-panel, .right-panel {
+        border: none; /* Quitar bordes para mejor visualización en pantallas pequeñas */
+    }
+
+    .controls {
+        flex-direction: column; /* Apilar botones verticalmente en pantallas pequeñas */
+    }
+
+    button {
+        width: 100%; /* Botones ocupan el ancho completo en pantallas pequeñas */
+    }
 }
