@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador/Desencriptador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h1>Encriptador/Desencriptador</h1>
+            <textarea id="inputText" placeholder="Ingrese el texto"></textarea>
+            <p id="warningMessage" class="warning">Solo letras minúsculas y sin acentos.</p>
+            <div class="controls">
+                <button id="encryptBtn">Encriptar</button>
+                <button id="decryptBtn">Desencriptar</button>
+            </div>
+            <button id="clearBtn" class="clear-btn">Limpiar</button>
+        </div>
+        <div class="right-panel">
+            <img src="img/muneco.svg" alt="Imagen descriptiva">
+            <textarea id="outputText" placeholder="Resultado" readonly></textarea>
+            <button id="copyBtn">Copiar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Encriptador/Desencriptador. OSIRION-DESIGN, Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
